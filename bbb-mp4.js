@@ -20,10 +20,10 @@ var options = {
         '--disable-dev-shm-usage',
         '--start-fullscreen',
         '--app=https://www.google.com/',
-        `--window-size=${width},${height}`,
+        `--window-size=1280,800`,
     ],
 }
-options.executablePath = "/usr/bin/google-chrome"
+options.executablePath = "/usr/bin/chromium-browser"
 async function main() {
     let browser, page;
     try {

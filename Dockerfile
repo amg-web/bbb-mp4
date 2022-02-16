@@ -6,6 +6,7 @@ WORKDIR /usr/src/app
 
 # Install curl and gnupg2 for source file modification
 RUN apt-get -y update && apt-get -y install curl gnupg2 software-properties-common chromium-browser ca-certificates lsb-release \
+    alsa-utils alsa-oss pulseaudio pulseaudio-utils xvfb \
     && rm -rf /var/lib/apt/lists/* \
     && mkdir download
 
@@ -16,8 +17,8 @@ RUN add-apt-repository ppa:jonathonf/ffmpeg-4 && curl -sL https://deb.nodesource
              libgdk-pixbuf2.0-0 libglib2.0-0 libgtk-3-0 libnspr4 libpango-1.0-0 \
              libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcomposite1 \
              libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 \
-             libxtst6 fonts-liberation libappindicator1 libnss3 xdg-utils xvfb fonts-noto \
-             dbus-x11 libasound2 fluxbox libasound2-plugins alsa-utils alsa-oss pulseaudio pulseaudio-utils \
+             libxtst6 fonts-liberation libappindicator1 libnss3 xdg-utils fonts-noto \
+             dbus-x11 libasound2 fluxbox libasound2-plugins \
              && rm -rf /var/lib/apt/lists/*
 
 #copy all files from bbb-mp4 project

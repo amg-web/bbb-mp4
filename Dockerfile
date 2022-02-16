@@ -24,7 +24,7 @@ RUN add-apt-repository ppa:jonathonf/ffmpeg-4 && curl -sL https://deb.nodesource
 COPY *.sh *.js *.json ./
 
 #Install npm scripts
-RUN npm install npm@latest -g && RUN npm install
+RUN npm install npm@latest -g && npm install
 
 #Initialize ENV
 ENV REC_URL=" "

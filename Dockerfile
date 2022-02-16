@@ -18,7 +18,7 @@ RUN add-apt-repository ppa:jonathonf/ffmpeg-4 && curl -sL https://deb.nodesource
              libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 \
              libxtst6 fonts-liberation libappindicator1 libnss3 xdg-utils xvfb fonts-noto \
              dbus-x11 libasound2 fluxbox libasound2-plugins alsa-utils alsa-oss pulseaudio pulseaudio-utils \
-             rm -rf /var/lib/apt/lists/*
+             && rm -rf /var/lib/apt/lists/*
 
 #copy all files from bbb-mp4 project
 COPY *.sh *.js *.json ./
